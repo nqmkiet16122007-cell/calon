@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <meta name="theme-color" content="#062b45">
+  <title>DEEP CURRENT — Eat. Grow. Survive.</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="brand"><span class="brand-mark">◉</span><span>PELAGIC ARCADE</span><span class="brand-line"></span><span class="brand-index">01 / ABYSSAL ZONE</span></header>
+    <section class="game-frame" aria-label="Deep Current game">
+      <canvas id="game" width="1280" height="720" aria-label="Game canvas"></canvas>
+      <div class="hud" id="hud" hidden>
+        <div class="hud-left"><div class="level-label">LEVEL <b id="level">01</b></div><div class="xp-track"><i id="xp-fill"></i></div><div class="xp-caption"><span>TO NEXT LEVEL</span><span id="xp-text">0 / 30</span></div></div>
+        <div class="hud-right"><div class="score-label">SCORE</div><div class="score-value" id="score">000000</div><div class="best-value">BEST <span id="best">000000</span></div></div>
+        <div class="hud-bottom"><div class="hearts" id="hearts"></div><div class="combo" id="combo" hidden>CHAIN <b id="combo-count">×2</b></div><div class="timer" id="timer">00:00</div></div>
+        <button class="pause-button" id="pause-btn" aria-label="Pause">Ⅱ</button>
+        <div class="tutorial" id="tutorial"><b>WASD / ARROWS</b><span>MOVE THROUGH THE CURRENT</span><span>EAT SMALLER · AVOID LARGER</span></div>
+        <div class="toast" id="toast"></div>
+        <div class="touch-pad" id="touch-pad" aria-label="Touch movement controls"><button data-dir="up">▲</button><div><button data-dir="left">◀</button><button data-dir="down">▼</button><button data-dir="right">▶</button></div></div>
+      </div>
+      <div class="screen" id="menu">
+        <div class="screen-content menu-content"><div class="eyebrow">AN ARCADE SURVIVAL</div><h1>DEEP<br><em>CURRENT</em></h1><p class="tagline">Eat. Grow. Survive.</p><button class="primary" id="play-btn">DIVE IN <span>↗</span></button><div class="menu-links"><button id="how-btn">HOW TO PLAY</button><button id="settings-btn">SETTINGS</button></div><div class="menu-best">PERSONAL BEST <b id="menu-best">000000</b></div></div>
+        <div class="side-note">PELAGIC<br>ECOSYSTEM STUDY<br><span>34° 12′ S · 151° 48′ E</span></div>
+      </div>
+      <div class="screen sub-screen" id="how-screen" hidden><div class="panel"><button class="close" data-close>×</button><div class="eyebrow">FIELD GUIDE / 01</div><h2>READ THE CURRENT</h2><div class="guide-row"><kbd>W A S D</kbd><span>or arrow keys</span><b>SWIM</b></div><div class="guide-row"><span class="guide-dot small"></span><span>Smaller fish</span><b class="safe">EAT</b></div><div class="guide-row"><span class="guide-dot large"></span><span>Larger fish</span><b class="danger">AVOID</b></div><p class="panel-note">Build a feeding chain to multiply your score. A quick fish leaves more room to grow.</p><button class="primary compact" data-close>GOT IT <span>↗</span></button></div></div>
+      <div class="screen sub-screen" id="settings-screen" hidden><div class="panel"><button class="close" data-close>×</button><div class="eyebrow">SYSTEM / 02</div><h2>SETTINGS</h2><div class="setting-row">Sound effects <button class="toggle" id="sound-toggle">ON</button></div><div class="setting-row">Ambient music <button class="toggle" id="music-toggle">OFF</button></div><p class="panel-note">Soft sonar tones and an atmospheric current. No external audio required.</p><button class="primary compact" data-close>DONE <span>↗</span></button></div></div>
+      <div class="screen sub-screen" id="pause-screen" hidden><div class="panel centered"><div class="eyebrow">CURRENT INTERRUPTED</div><h2>PAUSED</h2><button class="primary compact" id="resume-btn">RESUME <span>↗</span></button><button class="secondary" id="restart-btn">RESTART DIVE</button><button class="text-button" id="pause-menu-btn">RETURN TO SURFACE</button></div></div>
+      <div class="screen sub-screen" id="over-screen" hidden><div class="panel centered"><div class="eyebrow" id="over-eyebrow">DIVE COMPLETE</div><h2>GAME OVER</h2><div class="result-score"><span>FINAL SCORE</span><b id="final-score">0</b></div><div class="result-grid"><div><span>BEST</span><b id="final-best">0</b></div><div><span>DEPTH LEVEL</span><b id="final-level">1</b></div><div><span>MAX CHAIN</span><b id="final-combo">×1</b></div><div><span>SURVIVAL</span><b id="final-time">00:00</b></div></div><button class="primary compact" id="again-btn">DIVE AGAIN <span>↗</span></button><button class="text-button" id="over-menu-btn">MAIN MENU</button></div></div>
+      <div class="screen sub-screen" id="loading-screen" hidden><div class="loading-copy">MAPPING THE BLUE<br><span>LOADING ECOSYSTEM</span><i></i></div></div>
+    </section>
+    <footer class="footer"><span>DEEP CURRENT <i>—</i> ENDLESS SURVIVAL</span><span>MOVE <b>WASD</b> / <b>ARROWS</b><i>·</i> PAUSE <b>ESC</b></span><span>KENNEY FISH PACK 2</span></footer>
+  </main>
+  <script src="js/config.js"></script><script src="js/entities.js"></script><script src="js/ui.js"></script><script src="js/game.js"></script><script src="js/main.js"></script>
+</body>
+</html>

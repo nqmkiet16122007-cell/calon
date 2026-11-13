@@ -1,0 +1,99 @@
+{
+  "name": "BATTLE OF THE SEAS 2D Asset Pack",
+  "format": "SVG",
+  "style": "flat vector cartoon, dark teal and cyan underwater palette",
+  "canvas": {
+    "fish": [
+      256,
+      128
+    ],
+    "hud": [
+      960,
+      64
+    ],
+    "trash": [
+      96,
+      96
+    ],
+    "props": [
+      128,
+      128
+    ]
+  },
+  "animations": {
+    "player": {
+      "frames": 8,
+      "fps": 8,
+      "pivot": [
+        128,
+        64
+      ],
+      "loop": true
+    },
+    "enemyFish": {
+      "frames": 8,
+      "fps": 8,
+      "pivot": [
+        128,
+        64
+      ],
+      "loop": true
+    },
+    "shark": {
+      "frames": 8,
+      "fps": 9,
+      "pivot": [
+        128,
+        64
+      ],
+      "loop": true,
+      "states": [
+        "idle",
+        "turn",
+        "attack",
+        "hurt",
+        "defeated"
+      ]
+    },
+    "trash": {
+      "frames": 8,
+      "fps": 5,
+      "pivot": [
+        48,
+        48
+      ],
+      "loop": true
+    },
+    "bubbles": {
+      "frames": 8,
+      "fps": 7,
+      "pivot": [
+        32,
+        32
+      ],
+      "loop": true
+    },
+    "seaweed": {
+      "frames": 8,
+      "fps": 5,
+      "pivot": [
+        64,
+        118
+      ],
+      "loop": true
+    },
+    "effects": {
+      "frames": 8,
+      "fps": 12,
+      "pivot": "center",
+      "loop": false
+    }
+  },
+  "folders": [
+    "PLAYER",
+    "ENEMIES",
+    "HUD",
+    "ENVIRONMENT",
+    "EFFECTS"
+  ]
+}
